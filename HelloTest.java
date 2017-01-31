@@ -7,21 +7,17 @@ import org.junit.After;
 
 public class HelloTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	@Before	
 	public void setUpStreams() {
-   		System.setOut(new PrintStream(outContent));
-		System.setErr(new PrintStream(errContent));	
+   		System.setOut(new PrintStream(outContent));	
 	}
 	@After
 	public void cleanUpStreams() {
-    		System.setOut(null);
-		System.setErr(null);
+    		System.setOut(new PrintStream(outContent));
 		}
 	@Test
 	public void MainTest(){
-		Hello hello = new Hello();
-		hello.main();
+		Hello.main();
     		assertEquals("Hello world.\n", outContent.toString());
 	}
 }
