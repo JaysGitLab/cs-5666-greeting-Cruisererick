@@ -7,13 +7,15 @@ import org.junit.After;
 
 public class HelloTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private PrintStream initial;
 	@Before	
 	public void setUpStreams() {
-   		System.setOut(new PrintStream(outContent));	
+   		initial = System.out;
+		System.setOut(new PrintStream(outContent));	
 	}
 	@After
 	public void cleanUpStreams() {
-    		System.setOut(new PrintStream(outContent));
+    		System.setOut(initial);
 		}
 	@Test
 	public void MainTest(){
