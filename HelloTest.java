@@ -19,7 +19,15 @@ public class HelloTest {
 		}
 	@Test
 	public void MainTest(){
-		Hello.main();
-    		assertEquals("Hello, Erick\n", outContent.toString());
+		String [] test = new String[1];
+		test[0]="UserName";
+		Hello.main(test);
+    		assertEquals("Hello, UserName\n",outContent.toString());
 	}
+	@Test
+	public void SecondTest(){
+	String [] test = new String[0];
+	
+	Hello.main(test);
+	assertEquals("Hello, Erick\n",outContent.toString());}
 }
