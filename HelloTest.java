@@ -20,6 +20,6 @@ public class HelloTest {
 	@Test
 	public void MainTest(){
 		Hello.main();
-    		assertEquals("Hello world.\n", outContent.toString());
+    		assertEquals("Hello, Erick\n", outContent.toString());
 	}
 }
