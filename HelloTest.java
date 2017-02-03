@@ -24,10 +24,17 @@ public class HelloTest {
 		Hello.main(test);
     		assertEquals("Hello, UserName\n",outContent.toString());
 	}
+	
+	@Test
+	public void UpperCaseTest(){
+		String [] test = new String[1];
+		test[0]="userName";
+		Hello.main(test);
+		assertEquals("Hello, UserName\n",outContent.toString());	
+	}
 	@Test
 	public void SecondTest(){
-	String [] test = new String[0];
-	
-	Hello.main(test);
-	assertEquals("Hello, Erick\n",outContent.toString());}
+		String [] test = new String[0];
+		Hello.main(test);
+		assertEquals("Hello, Erick\n",outContent.toString());}
 }
