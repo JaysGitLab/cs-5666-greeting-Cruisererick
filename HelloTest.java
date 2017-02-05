@@ -37,4 +37,14 @@ public class HelloTest {
 		String [] test = new String[0];
 		Hello.main(test);
 		assertEquals("Hello, Erick\n",outContent.toString());}
+
+	@Test
+	public void MoreText(){
+	String [] test  = new String[3];
+	test[0] = "-me";
+	test[1] = "jarvis";
+	test[2] = "tony";
+	Hello.main(test);
+	assertEquals( "Hello Tony, My name is Jarvis. How are you today, Tony?\n", outContent.toString()); 
+	}
 }
